@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 220 33% 97%;
+    --foreground: 226 45% 12%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 226 45% 12%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 226 45% 12%;
+
+    --primary: 226 55% 24%;
+    --primary-foreground: 45 100% 97%;
+
+    --secondary: 220 30% 93%;
+    --secondary-foreground: 226 55% 24%;
+
+    --muted: 220 25% 94%;
+    --muted-foreground: 226 18% 38%;
+
+    --accent: 45 93% 55%;
+    --accent-foreground: 226 55% 16%;
+
+    --destructive: 0 72% 45%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 22% 87%;
+    --input: 220 22% 87%;
+    --ring: 226 55% 24%;
+
+    --radius: 0.9rem;
+
+    --sidebar-background: 226 55% 16%;
+    --sidebar-foreground: 220 30% 88%;
+    --sidebar-primary: 45 93% 55%;
+    --sidebar-primary-foreground: 226 55% 16%;
+    --sidebar-accent: 226 45% 25%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 226 40% 25%;
+    --sidebar-ring: 45 93% 55%;
+  }
+
+  .dark {
+    --background: 226 45% 8%;
+    --foreground: 220 30% 94%;
+    --card: 226 45% 11%;
+    --card-foreground: 220 30% 94%;
+    --popover: 226 45% 11%;
+    --popover-foreground: 220 30% 94%;
+    --primary: 45 93% 55%;
+    --primary-foreground: 226 55% 16%;
+    --secondary: 226 35% 18%;
+    --secondary-foreground: 220 30% 94%;
+    --muted: 226 35% 18%;
+    --muted-foreground: 220 20% 70%;
+    --accent: 45 93% 55%;
+    --accent-foreground: 226 55% 16%;
+    --destructive: 0 70% 55%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 226 35% 20%;
+    --input: 226 35% 20%;
+    --ring: 45 93% 55%;
+    --sidebar-background: 226 55% 12%;
+    --sidebar-foreground: 220 30% 88%;
+    --sidebar-primary: 45 93% 55%;
+    --sidebar-primary-foreground: 226 55% 16%;
+    --sidebar-accent: 226 45% 22%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 226 40% 22%;
+    --sidebar-ring: 45 93% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background font-sans text-foreground antialiased;
+  }
+
+  h1, h2, h3 {
+    @apply font-display;
+  }
+}

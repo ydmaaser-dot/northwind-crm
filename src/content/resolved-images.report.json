@@ -1,0 +1,16 @@
+{
+  "budgetReached": false,
+  "resolved": 0,
+  "total": 0,
+  "ms": 0,
+  "misses": [],
+  "source": {
+    "dynamicCalls": 0,
+    "dataQueries": 0,
+    "blindFiles": [],
+    "importedFiles": 0,
+    "seedQueries": 0,
+    "savedPending": [],
+    "savedRowsFrom": "none"
+  }
+}
