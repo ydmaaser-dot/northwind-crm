@@ -7,6 +7,7 @@ import { StatusBadge } from "@/components/blocks";
 import { supabase } from "@/integrations/supabase/client";
 import { useMe } from "@/lib/crm";
 import { cn } from "@/lib/utils";
+import ThemeToggle from "@/components/ThemeToggle";
 
 export const LOGO = "/assets/7ae2c827-a6ca-4e50-818a-803efe20c9ca.png";
 
@@ -102,9 +103,15 @@ export default function AppShell() {
           <img src={LOGO} alt="Northwind CRM logo" className="h-8 w-8 rounded-md" />
           <span className="font-display font-semibold text-white">Northwind CRM</span>
         </Link>
-        <Button variant="ghost" size="icon" className="text-white hover:bg-sidebar-accent hover:text-white" onClick={() => setOpen(true)} aria-label="Open menu">
-          <Menu className="h-5 w-5" />
-        </Button>
+        <div className="flex items-center gap-1">
+          <ThemeToggle className="text-white hover:bg-sidebar-accent hover:text-white" />
+          <Button variant="ghost" size="icon" className="text-white hover:bg-sidebar-accent hover:text-white" onClick={() => setOpen(true)} aria-label="Open menu">
+            <Menu className="h-5 w-5" />
+          </Button>
+        </div>
+      </header>
+      <header className="sticky top-0 z-30 hidden items-center justify-end border-b bg-background/95 px-8 py-2 backdrop-blur lg:flex">
+        <ThemeToggle />
       </header>
       <Sheet open={open} onOpenChange={setOpen}>
         <SheetContent side="left" className="w-72 border-0 p-0">
