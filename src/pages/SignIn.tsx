@@ -77,7 +77,7 @@ const SignIn = () => {
         <form onSubmit={submit} className="w-full max-w-sm space-y-5">
           <img src={LOGO} alt="Northwind CRM logo" className="h-11 w-11 rounded-xl lg:hidden" />
           <div>
-            <h1 className="text-3xl font-semibold">Welcome to Northwind CRM</h1>
+            <h1 className="text-3xl font-semibold">Sign in to Northwind CRM</h1>
             <p className="mt-1 text-sm text-muted-foreground">
               {mode === "in" ? "Sign in with your team account." : "Create your account. The first account becomes the admin; later ones wait for an admin to approve them."}
             </p>
