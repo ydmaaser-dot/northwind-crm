@@ -134,21 +134,21 @@ const Tasks = () => {
           <DialogHeader><DialogTitle>{draft?.id ? "Edit task" : "Add task"}</DialogTitle></DialogHeader>
           {draft && (
             <div className="grid gap-3">
-              <div><Label>Task</Label><Input value={draft.title} onChange={(e) => setDraft({ ...draft, title: e.target.value })} className="rounded-xl" /></div>
+              <div><Label htmlFor="task-title">Task</Label><Input id="task-title" value={draft.title} onChange={(e) => setDraft({ ...draft, title: e.target.value })} className="rounded-xl" /></div>
               <div className="grid gap-3 sm:grid-cols-2">
-                <div><Label>Due date</Label><Input type="date" value={draft.due_date} onChange={(e) => setDraft({ ...draft, due_date: e.target.value })} className="rounded-xl" /></div>
+                <div><Label htmlFor="task-due">Due date</Label><Input id="task-due" type="date" value={draft.due_date} onChange={(e) => setDraft({ ...draft, due_date: e.target.value })} className="rounded-xl" /></div>
                 <div>
-                  <Label>Assigned to</Label>
+                  <Label htmlFor="task-assignee">Assigned to</Label>
                   <Select value={draft.assigned_to} onValueChange={(v) => setDraft({ ...draft, assigned_to: v })}>
-                    <SelectTrigger className="rounded-xl"><SelectValue placeholder="Choose" /></SelectTrigger>
+                    <SelectTrigger id="task-assignee" className="rounded-xl"><SelectValue placeholder="Choose" /></SelectTrigger>
                     <SelectContent>{team.map((p) => <SelectItem key={p.user_id} value={p.user_id}>{p.display_name}</SelectItem>)}</SelectContent>
                   </Select>
                 </div>
               </div>
               <div>
-                <Label>Linked to</Label>
+                <Label htmlFor="task-link">Linked to</Label>
                 <Select value={draft.link} onValueChange={(v) => setDraft({ ...draft, link: v })}>
-                  <SelectTrigger className="rounded-xl"><SelectValue /></SelectTrigger>
+                  <SelectTrigger id="task-link" className="rounded-xl"><SelectValue /></SelectTrigger>
                   <SelectContent>
                     <SelectItem value="none">Nothing</SelectItem>
                     {contacts.map((c) => <SelectItem key={c.id} value={`contact:${c.id}`}>Contact: {c.name}</SelectItem>)}

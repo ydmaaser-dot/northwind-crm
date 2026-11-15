@@ -183,22 +183,22 @@ const Contacts = () => {
           <DialogHeader><DialogTitle>{draft?.id ? "Edit contact" : "Add contact"}</DialogTitle></DialogHeader>
           {draft && (
             <div className="grid gap-3">
-              <div><Label>Name</Label><Input value={draft.name} onChange={set("name")} className="rounded-xl" /></div>
+              <div><Label htmlFor="contact-name">Name</Label><Input id="contact-name" value={draft.name} onChange={set("name")} className="rounded-xl" /></div>
               <div className="grid gap-3 sm:grid-cols-2">
-                <div><Label>Company</Label><Input value={draft.company} onChange={set("company")} className="rounded-xl" /></div>
+                <div><Label htmlFor="contact-company">Company</Label><Input id="contact-company" value={draft.company} onChange={set("company")} className="rounded-xl" /></div>
                 <div>
-                  <Label>Status</Label>
+                  <Label htmlFor="contact-status">Status</Label>
                   <Select value={draft.status} onValueChange={(v) => setDraft({ ...draft, status: v })}>
-                    <SelectTrigger className="rounded-xl"><SelectValue /></SelectTrigger>
+                    <SelectTrigger id="contact-status" className="rounded-xl"><SelectValue /></SelectTrigger>
                     <SelectContent>{CONTACT_STATUSES.map((s) => <SelectItem key={s} value={s}>{s}</SelectItem>)}</SelectContent>
                   </Select>
                 </div>
               </div>
               <div className="grid gap-3 sm:grid-cols-2">
-                <div><Label>Email</Label><Input type="email" value={draft.email} onChange={set("email")} className="rounded-xl" /></div>
-                <div><Label>Phone</Label><Input value={draft.phone} onChange={set("phone")} className="rounded-xl" /></div>
+                <div><Label htmlFor="contact-email">Email</Label><Input id="contact-email" type="email" value={draft.email} onChange={set("email")} className="rounded-xl" /></div>
+                <div><Label htmlFor="contact-phone">Phone</Label><Input id="contact-phone" value={draft.phone} onChange={set("phone")} className="rounded-xl" /></div>
               </div>
-              <div><Label>Notes</Label><Textarea rows={4} value={draft.notes} onChange={set("notes")} className="rounded-xl" /></div>
+              <div><Label htmlFor="contact-notes">Notes</Label><Textarea id="contact-notes" rows={4} value={draft.notes} onChange={set("notes")} className="rounded-xl" /></div>
             </div>
           )}
           <DialogFooter>

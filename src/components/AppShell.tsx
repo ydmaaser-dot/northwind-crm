@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, NavLink, Outlet, useNavigate } from "react-router-dom";
-import { Activity, CheckSquare, Handshake, LayoutDashboard, LogOut, Menu, Users, UserCog } from "lucide-react";
+import { Activity, BarChart3, CheckSquare, Handshake, LayoutDashboard, LogOut, Menu, Users, UserCog } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTitle } from "@/components/ui/sheet";
 import { StatusBadge } from "@/components/blocks";
@@ -16,6 +16,7 @@ const items = [
   { to: "/contacts", label: "Contacts", icon: Users },
   { to: "/deals", label: "Deals", icon: Handshake },
   { to: "/tasks", label: "Tasks", icon: CheckSquare },
+  { to: "/reports", label: "Reports", icon: BarChart3 },
   { to: "/activity", label: "Activity", icon: Activity },
 ];
 
